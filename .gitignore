@@ -27,5 +27,5 @@ Dewi-1.0.0/
 Dewi-1.0.0.zip
 node_modules/
 dist/
-public/assets/vendor/
+# public/assets/vendor/
 
