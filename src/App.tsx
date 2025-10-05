@@ -1,13 +1,9 @@
 
-// import ReadySetDoneAnimation from './components/ReadySetDoneAnimation';
-// import TabbedInterface from './components/TabbedInterface';
-import  { useState } from 'react';
 import TabbedInterface from './components/TabbedInterface';
 import TeamSection from "./components/TeamSection";
 
 
 function App() {
-  const [activeTab, setActiveTab] = useState(1);
   return (
     <>
       <header id="header" className="header d-flex align-items-center fixed-top">
