@@ -1907,7 +1907,8 @@ section,
     position: fixed;
     top: 70px;
     right: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.4);
+    
     /* Semi-transparent dark background */
     backdrop-filter: blur(10px);
     /* Adds blur effect behind menu */
