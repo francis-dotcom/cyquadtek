@@ -148,7 +148,6 @@ type TeamMember = {
   name: string;
   role: string;
   bio: string;
-  image: string;
 };
 
 const team: TeamMember[] = [
@@ -157,21 +156,18 @@ const team: TeamMember[] = [
     name: "Francis O.",
     role: "Full Stack Cloud Engineer",
     bio: "Francis specializes in building scalable cloud-native applications, leading DevOps initiatives, and designing resilient distributed systems.",
-    image: "/assets/img/team-1.jpg",
   },
   {
     id: 2,
     name: "Jane D.",
     role: "UI/UX Designer",
     bio: "Jane is passionate about crafting intuitive, human-centered digital experiences with a strong focus on accessibility.",
-    image: "/assets/img/team-2.jpg",
   },
   {
     id: 3,
     name: "Michael T.",
     role: "Project Manager",
     bio: "Michael brings over 10 years of experience in agile project management and risk management for enterprise IT solutions.",
-    image: "/assets/img/team-3.jpg",
   },
 ];
 
@@ -203,29 +199,29 @@ export default function TeamSection() {
           <p>Our dedicated professionals</p>
         </div>
 
-        {/* Desktop view (unchanged) */}
+        {/* Desktop view (inline bios with initials only) */}
         {!isMobile && (
           <div className="row gy-4">
             {team.map((member) => (
               <div key={member.id} className="col-lg-4 col-md-6">
-                <div className="card h-100 shadow-sm border-0">
-                  <img
-                    src={member.image}
-                    className="card-img-top rounded-top"
-                    alt={member.name}
-                  />
-                  <div className="card-body">
-                    <h5 className="fw-bold">{member.name}</h5>
-                    <p className="text-primary">{member.role}</p>
-                    <p className="text-muted small">{member.bio}</p>
+                <div className="card h-100 shadow-sm border-0 p-3 d-flex flex-column align-items-start">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="avatar-circle me-3">
+                      {getInitials(member.name)}
+                    </div>
+                    <div>
+                      <h5 className="fw-bold mb-0">{member.name}</h5>
+                      <small className="text-primary">{member.role}</small>
+                    </div>
                   </div>
+                  <p className="text-muted small">{member.bio}</p>
                 </div>
               </div>
             ))}
           </div>
         )}
 
-        {/* Mobile view (strip list with initials) */}
+        {/* Mobile view (strips with initials → modal for bio) */}
         {isMobile && (
           <div className="list-group">
             {team.map((member) => (
@@ -266,11 +262,6 @@ export default function TeamSection() {
               </div>
               <p className="text-primary fw-semibold">{activeMember.role}</p>
               <p className="text-muted">{activeMember.bio}</p>
-              <img
-                src={activeMember.image}
-                alt={activeMember.name}
-                className="img-fluid rounded-3 shadow"
-              />
             </div>
           </div>
         )}
@@ -279,8 +270,8 @@ export default function TeamSection() {
       {/* Styling */}
       <style>{`
         .avatar-circle {
-          width: 40px;
-          height: 40px;
+          width: 45px;
+          height: 45px;
           background: #007bff;
           color: white;
           border-radius: 50%;
@@ -288,6 +279,7 @@ export default function TeamSection() {
           align-items: center;
           justify-content: center;
           font-weight: bold;
+          font-size: 16px;
         }
         .modal-backdrop-custom {
           position: fixed;
