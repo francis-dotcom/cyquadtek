@@ -84,11 +84,16 @@ function App() {
               </li>
             </ul>
             {/* <i className="mobile-nav-toggle d-xl-none bi bi-list" /> */}
-            <i 
+            <i
+              className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#000", zIndex: 2000 }}
+            />
+            {/* <i 
               className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`} 
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
               style={{ cursor: "pointer" }}
-            />
+            /> */}
           </nav>
           <a className="cta-btn" href="index.html#about">
             Get Started
