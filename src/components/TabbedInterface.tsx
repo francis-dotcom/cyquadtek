@@ -375,23 +375,19 @@ export default function TabbedInterface() {
   // }, []);
 
   useEffect(() => {
-    const checkScreen = () => {
-      const mobile = window.innerWidth < 992;
-      setIsMobile(mobile);
+    const mobile = window.innerWidth < 992;
+    setIsMobile(mobile);
 
-      if (!mobile && activeTab === null) {
-        setActiveTab(tabs[0].id);   // Desktop → show first card by default
-      }
+    if (!mobile && activeTab === null) {
+      setActiveTab(tabs[0].id);   // desktop: load first card by default
+    }
 
-      if (mobile && activeTab !== null) {
-        setActiveTab(null);         // Mobile → modal closed by default
-      }
-    };
-
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-    return () => window.removeEventListener("resize", checkScreen);
-  }, [activeTab, tabs]);
+    if (mobile) {
+      setActiveTab(null);         // mobile: no modal on load
+    }
+    // we only want this to run once at mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
 
   return (
