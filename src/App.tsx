@@ -16,25 +16,40 @@ function App() {
             {/* <h1 className="sitename">CYQUADTECH</h1> */}
           </a>
           {/* <nav id="navmenu" className="navmenu"> */}
-          <nav id="navmenu" className={`navmenu ${isMenuOpen ? "navmenu-active" : ""}`}>
+          {/* <nav id="navmenu" className={`navmenu ${isMenuOpen ? "navmenu-active" : ""}`}> */}
+          <nav id="navmenu" className={`navmenu ${isMenuOpen ? "mobile-nav-active" : ""}`}>
 
             <ul>
-              <li>
+              {/* <li>
                 <a href="#hero" className="active">
+                  Home
+                </a>
+              </li> */}
+              <li>
+                <a href="#hero" className="active" onClick={() => setIsMenuOpen(false)}>
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
               </li>
-              <li>
+              {/* <li>
+                <a href="#about">About</a>
+              </li> */}
+              {/* <li>
                 <a href="#services">Services</a>
+              </li> */}
+              <li>
+                <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
               </li>
               {/* <li>
                 <a href="#portfolio">Portfolio</a>
               </li> */}
-              <li>
+              {/* <li>
                 <a href="#team">Team</a>
+              </li> */}
+              <li>
+                <a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a>
               </li>
               {/* <li className="dropdown">
                 <a href="#">
@@ -79,8 +94,11 @@ function App() {
                   </li>
                 </ul>
               </li> */}
-              <li>
+              {/* <li>
                 <a href="#contact">Contact</a>
+              </li> */}
+              <li>
+                <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
               </li>
             </ul>
             {/* <i className="mobile-nav-toggle d-xl-none bi bi-list" /> */}

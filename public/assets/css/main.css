@@ -1900,19 +1900,41 @@ section,
   /* optional: fills space if not covering */
 }
 
-/* hide nav by default on mobile */
-.navmenu {
-  display: none;
+/* Mobile Navigation Styles */
+@media (max-width: 1279px) {
+  .navmenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 4px;
+    z-index: 99;
+    width: 250px;
+  }
+
+  .navmenu.mobile-nav-active ul {
+    display: block;
+  }
+
+  .navmenu ul li {
+    padding: 12px 20px;
+  }
+
+  .navmenu ul li a {
+    font-size: 15px;
+  }
 }
 
-/* show nav when toggled */
-.navmenu.navmenu-active {
-  display: block;
-}
+/* Desktop - show menu normally */
+@media (min-width: 1280px) {
+  .mobile-nav-toggle {
+    display: none !important;
+  }
 
-/* desktop always visible */
-@media (min-width: 992px) {
-  .navmenu {
-    display: block !important;
+  .navmenu ul {
+    display: flex !important;
   }
 }
