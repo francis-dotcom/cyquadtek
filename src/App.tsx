@@ -107,11 +107,13 @@ function App() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
             /> */}
-            <i
-              className="mobile-nav-toggle d-xl-none bi bi-list"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
-            />
+            {!isMenuOpen && (
+              <i
+                className="mobile-nav-toggle d-xl-none bi bi-list"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
+              />
+            )}
             {/* <i 
               className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`} 
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
