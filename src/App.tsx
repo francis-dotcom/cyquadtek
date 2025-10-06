@@ -495,14 +495,14 @@ function App() {
             {/* You can delete the links only if you've purchased the pro version. */}
             {/* Licensing information: https://bootstrapmade.com/license/ */}
             {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] */}
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>{" "}
-            Distributed by <a href="“https://themewagon.com">ThemeWagon</a>
+            {/* Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>{" "} */}
+            {/* Distributed by <a href="“https://themewagon.com">ThemeWagon</a> */}
           </div>
-          <a href="“https://themewagon.com"></a>
+          {/* <a href="“https://themewagon.com"></a> */}
         </div>
-        <a href="“https://themewagon.com"></a>
+        {/* <a href="“https://themewagon.com"></a> */}
       </footer>
-      <a href="“https://themewagon.com">{/* Scroll Top */}</a>
+      <a href="“https://themewagon.com">Scroll Top</a>
       <a
         href="#"
         id="scroll-top"
