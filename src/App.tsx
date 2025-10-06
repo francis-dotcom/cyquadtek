@@ -15,16 +15,9 @@ function App() {
             <img src="/assets/img/logo3.png" alt=""/>
             {/* <h1 className="sitename">CYQUADTECH</h1> */}
           </a>
-          {/* <nav id="navmenu" className="navmenu"> */}
-          {/* <nav id="navmenu" className={`navmenu ${isMenuOpen ? "navmenu-active" : ""}`}> */}
           <nav id="navmenu" className={`navmenu ${isMenuOpen ? "mobile-nav-active" : ""}`}>
 
             <ul>
-              {/* <li>
-                <a href="#hero" className="active">
-                  Home
-                </a>
-              </li> */}
               <li>
                 <a href="#hero" className="active" onClick={() => setIsMenuOpen(false)}>
                   Home
@@ -33,21 +26,9 @@ function App() {
               <li>
                 <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
               </li>
-              {/* <li>
-                <a href="#about">About</a>
-              </li> */}
-              {/* <li>
-                <a href="#services">Services</a>
-              </li> */}
               <li>
                 <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
               </li>
-              {/* <li>
-                <a href="#portfolio">Portfolio</a>
-              </li> */}
-              {/* <li>
-                <a href="#team">Team</a>
-              </li> */}
               <li>
                 <a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a>
               </li>
@@ -224,27 +205,12 @@ function App() {
                     We don't just write code, we solve problems. By combining deep technical expertise with a consultative, client-first mindset, 
                     we tailor every solution to your unique challenges and goals. Our agile process ensures transparency, speed, and measurable results.
                   </p>
-                  {/* <div className="position-relative mt-4">
-                    <img
-                      src="/assets/img/about-2.jpg"
-                      className="img-fluid rounded-4"
-                      alt=""
-                    />
-                    <a
-                      href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
-                      className="glightbox pulsating-play-btn"
-                    />
-                  </div> */}
                 </div>
               </div>
             </div>
           </div>
         </section>
-        {/* /About Section */}
-        {/* Stats Section */}
 
-        {/* /Stats Section */}
-        {/* Services Section */}
       <section id="services" className="services section light-background">
         {/* Section Title */}
         <div className="container section-title" data-aos="fade-up">
@@ -303,12 +269,6 @@ function App() {
           </div>
         </div>
       </section>
-      {/* /Services Section */}
-
-       
-        {/* Clients Section */}
-        
-        {/* /Clients Section */}
 
         {/* Features Section */}
         <TabbedInterface />        
