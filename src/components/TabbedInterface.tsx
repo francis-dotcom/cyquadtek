@@ -360,7 +360,9 @@ export default function TabbedInterface() {
     }
   ];
 
-  const currentTab = tabs.find(tab => tab.id === activeTab);
+  // const currentTab = tabs.find(tab => tab.id === activeTab);
+  const currentTab = tabs.find(tab => tab.id === activeTab) || null;
+
 
   // detect screen size
   useEffect(() => {
