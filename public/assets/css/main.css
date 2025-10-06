@@ -1905,17 +1905,16 @@ section,
   .navmenu ul {
     display: none;
     position: fixed;
-    /* Changed from absolute to fixed */
     top: 70px;
-    /* Adjust based on your header height */
     right: 0;
-    background: white;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    background: #1a1a1a;
+    /* Dark background to match theme */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
     padding: 10px 0;
     border-radius: 4px;
     z-index: 9999;
-    /* Increased from 99 to 9999 */
-    width: 250px;
+    width: 180px;
+    /* Changed from 250px to 180px - narrower */
   }
 
   .navmenu.mobile-nav-active ul {
@@ -1928,6 +1927,13 @@ section,
 
   .navmenu ul li a {
     font-size: 15px;
+    color: #fff;
+    /* White text on dark background */
+  }
+
+  .navmenu ul li a:hover {
+    color: #00d4ff;
+    /* Optional: add hover effect */
   }
 }
 
