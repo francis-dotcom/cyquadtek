@@ -187,6 +187,14 @@ export default function TeamSection() {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
+  // Get initials
+  const getInitials = (name: string) =>
+    name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase();
+
   return (
     <section id="team" className="team section light-background">
       <div className="container">
@@ -217,17 +225,22 @@ export default function TeamSection() {
           </div>
         )}
 
-        {/* Mobile view (strips + modal) */}
+        {/* Mobile view (strip list with initials) */}
         {isMobile && (
           <div className="list-group">
             {team.map((member) => (
               <button
                 key={member.id}
-                className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                className="list-group-item list-group-item-action d-flex align-items-center"
                 onClick={() => setActiveMember(member)}
               >
-                <span>{member.name}</span>
-                <small className="text-muted">{member.role}</small>
+                <div className="avatar-circle me-3">
+                  {getInitials(member.name)}
+                </div>
+                <div className="d-flex flex-column text-start">
+                  <span className="fw-bold">{member.name}</span>
+                  <small className="text-muted">{member.role}</small>
+                </div>
               </button>
             ))}
           </div>
@@ -265,6 +278,17 @@ export default function TeamSection() {
 
       {/* Styling */}
       <style>{`
+        .avatar-circle {
+          width: 40px;
+          height: 40px;
+          background: #007bff;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+        }
         .modal-backdrop-custom {
           position: fixed;
           top: 0; left: 0;
