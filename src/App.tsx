@@ -14,7 +14,7 @@ function App() {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-       <Header />
+      <Header />
       <main className="main">
         <HeroSection />
         <AboutSection />
