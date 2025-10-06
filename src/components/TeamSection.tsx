@@ -81,7 +81,27 @@ export default function TeamSection() {
         )}
 
         {/* Mobile view (strips with initials → modal for bio) */}
+        {/* Mobile view (strips with initials → modal for bio) */}
         {isMobile && (
+          <div className="d-flex flex-column gap-3">
+            {team.map((member) => (
+              <button
+                key={member.id}
+                className="team-member-strip d-flex align-items-center p-3 border-0 bg-white shadow-sm"
+                onClick={() => setActiveMember(member)}
+              >
+                <div className="avatar-circle me-3">
+                  {getInitials(member.name)}
+                </div>
+                <div className="d-flex flex-column text-start">
+                  <span className="fw-bold">{member.name}</span>
+                  <small className="text-muted">{member.role}</small>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+        {/* {isMobile && (
           <div className="list-group">
             {team.map((member) => (
               <button
@@ -99,7 +119,7 @@ export default function TeamSection() {
               </button>
             ))}
           </div>
-        )}
+        )} */}
 
         {/* Modal for mobile */}
         {isMobile && activeMember && (
