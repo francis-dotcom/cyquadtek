@@ -102,8 +102,13 @@ function App() {
               </li>
             </ul>
             {/* <i className="mobile-nav-toggle d-xl-none bi bi-list" /> */}
-            <i
+            {/* <i
               className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
+            /> */}
+            <i
+              className="mobile-nav-toggle d-xl-none bi bi-list"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
             />
@@ -113,6 +118,20 @@ function App() {
               style={{ cursor: "pointer" }}
             /> */}
           </nav>
+          {/* Click outside to close menu */}
+          {isMenuOpen && (
+            <div 
+              onClick={() => setIsMenuOpen(false)}
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                zIndex: 9998
+              }}
+            />
+          )}
           <a className="cta-btn" href="index.html#about">
             Get Started
           </a>
