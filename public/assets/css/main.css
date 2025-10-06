@@ -1908,15 +1908,14 @@ section,
     top: 70px;
     right: 0;
     background: rgba(0, 0, 0, 0.4);
-    
-    /* Semi-transparent dark background */
     backdrop-filter: blur(10px);
-    /* Adds blur effect behind menu */
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
     padding: 10px 0;
     border-radius: 4px;
-    z-index: 99999;
+    z-index: 9999;
     width: 180px;
+    pointer-events: all;
+    /* Add this */
   }
 
   .navmenu.mobile-nav-active ul {
@@ -1925,11 +1924,19 @@ section,
 
   .navmenu ul li {
     padding: 12px 20px;
+    position: relative;
+    /* Add this */
+    z-index: 10000;
+    /* Add this */
   }
 
   .navmenu ul li a {
     font-size: 15px;
     color: #fff;
+    position: relative;
+    /* Add this */
+    z-index: 10001;
+    /* Add this */
   }
 
   .navmenu ul li a:hover {

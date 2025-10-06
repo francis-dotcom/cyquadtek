@@ -129,8 +129,8 @@ function App() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                zIndex: 9998,
-                pointerEvents: 'auto'
+                zIndex: 9990,
+                pointerEvents: 'all'
               }}
             />
           )}
