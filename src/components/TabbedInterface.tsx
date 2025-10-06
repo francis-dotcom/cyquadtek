@@ -317,7 +317,9 @@ import { useState, useEffect } from 'react';
 
 export default function TabbedInterface() {
   // const [activeTab, setActiveTab] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<number>(1);
+  // const [activeTab, setActiveTab] = useState<number>(1);
+  const [activeTab, setActiveTab] = useState<number | null>(1);
+
 
   const [isMobile, setIsMobile] = useState(false);
 
