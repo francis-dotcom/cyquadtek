@@ -152,11 +152,12 @@ type TeamMember = {
 
 const team: TeamMember[] = [
   {
-    id: 1,
-    name: "Francis O.",
-    role: "Full Stack Cloud Engineer",
-    bio: "Francis specializes in building scalable cloud-native applications, leading DevOps initiatives, and designing resilient distributed systems.",
+  id: 1,
+  name: "Francis O.",
+  role: "Full-Stack Cloud & AI Engineer",
+  bio: "Francis is a multidisciplinary engineer skilled in front-end, back-end, and cloud-native development. With expertise in React, Node.js, and Python, he builds scalable digital solutions while leveraging AI and machine learning to deliver intelligent, data-driven applications."
   },
+
   {
     id: 2,
     name: "Jane D.",
