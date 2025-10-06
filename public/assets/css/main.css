@@ -1899,3 +1899,20 @@ section,
   background-color: #fff;
   /* optional: fills space if not covering */
 }
+
+/* hide nav by default on mobile */
+.navmenu {
+  display: none;
+}
+
+/* show nav when toggled */
+.navmenu.navmenu-active {
+  display: block;
+}
+
+/* desktop always visible */
+@media (min-width: 992px) {
+  .navmenu {
+    display: block !important;
+  }
+}

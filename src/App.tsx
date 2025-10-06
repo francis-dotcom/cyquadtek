@@ -1,9 +1,11 @@
 
 import TabbedInterface from './components/TabbedInterface';
 import TeamSection from "./components/TeamSection";
+import { useState } from "react";
 
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
       <header id="header" className="header d-flex align-items-center fixed-top">
@@ -13,7 +15,9 @@ function App() {
             <img src="/assets/img/logo3.png" alt=""/>
             {/* <h1 className="sitename">CYQUADTECH</h1> */}
           </a>
-          <nav id="navmenu" className="navmenu">
+          {/* <nav id="navmenu" className="navmenu"> */}
+          <nav id="navmenu" className={`navmenu ${isMenuOpen ? "navmenu-active" : ""}`}>
+
             <ul>
               <li>
                 <a href="#hero" className="active">
@@ -79,7 +83,12 @@ function App() {
                 <a href="#contact">Contact</a>
               </li>
             </ul>
-            <i className="mobile-nav-toggle d-xl-none bi bi-list" />
+            {/* <i className="mobile-nav-toggle d-xl-none bi bi-list" /> */}
+            <i 
+              className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`} 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              style={{ cursor: "pointer" }}
+            />
           </nav>
           <a className="cta-btn" href="index.html#about">
             Get Started
