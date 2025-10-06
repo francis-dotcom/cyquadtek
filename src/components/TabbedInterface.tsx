@@ -366,13 +366,33 @@ export default function TabbedInterface() {
   // const currentTab = tabs.find(tab => tab.id === activeTab) || null;
 
 
-  // detect screen size
+  // // detect screen size
+  // useEffect(() => {
+  //   const checkScreen = () => setIsMobile(window.innerWidth < 992);
+  //   checkScreen();
+  //   window.addEventListener("resize", checkScreen);
+  //   return () => window.removeEventListener("resize", checkScreen);
+  // }, []);
+
   useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth < 992);
+    const checkScreen = () => {
+      const mobile = window.innerWidth < 992;
+      setIsMobile(mobile);
+
+      if (!mobile && activeTab === null) {
+        setActiveTab(tabs[0].id);   // Desktop → show first card by default
+      }
+
+      if (mobile && activeTab !== null) {
+        setActiveTab(null);         // Mobile → modal closed by default
+      }
+    };
+
     checkScreen();
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
-  }, []);
+  }, [activeTab, tabs]);
+
 
   return (
     <section id="services" className="services section light-background">
