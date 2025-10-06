@@ -159,10 +159,10 @@ const team: TeamMember[] = [
   },
 
   {
-    id: 2,
-    name: "Jane D.",
-    role: "UI/UX Designer",
-    bio: "Jane is passionate about crafting intuitive, human-centered digital experiences with a strong focus on accessibility.",
+  id: 2,
+  name: "Jane D.",
+  role: "UI/UX Designer & Mobile Developer",
+  bio: "Jane blends creative design with technical expertise, crafting intuitive, human-centered interfaces and developing robust mobile applications for iOS and Android. With a strong focus on accessibility and seamless user journeys, she bridges the gap between design and development to deliver exceptional mobile experiences."
   },
   {
     id: 3,
