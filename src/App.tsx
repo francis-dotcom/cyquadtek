@@ -2,126 +2,14 @@
 import TabbedInterface from './components/TabbedInterface';
 import TeamSection from "./components/TeamSection";
 import { useState } from "react";
+import Header from "./components/Header";
 
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <header id="header" className="header d-flex align-items-center fixed-top">
-        <div className="container-fluid container-xl position-relative d-flex align-items-center">
-          <a href="index.html" className="logo d-flex align-items-center me-auto">
-            {/* Uncomment the line below if you also wish to use an image logo */}
-            <img src="/assets/img/logo3.png" alt=""/>
-            {/* <h1 className="sitename">CYQUADTECH</h1> */}
-          </a>
-          <nav id="navmenu" className={`navmenu ${isMenuOpen ? "mobile-nav-active" : ""}`}>
-
-            <ul>
-              <li>
-                <a href="#hero" className="active" onClick={() => setIsMenuOpen(false)}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
-              </li>
-              <li>
-                <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
-              </li>
-              <li>
-                <a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a>
-              </li>
-              {/* <li className="dropdown">
-                <a href="#">
-                  <span>Dropdown</span>{" "}
-                  <i className="bi bi-chevron-down toggle-dropdown" />
-                </a>
-                <ul>
-                  <li>
-                    <a href="#">Dropdown 1</a>
-                  </li>
-                  <li className="dropdown">
-                    <a href="#">
-                      <span>Deep Dropdown</span>{" "}
-                      <i className="bi bi-chevron-down toggle-dropdown" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="#">Deep Dropdown 1</a>
-                      </li>
-                      <li>
-                        <a href="#">Deep Dropdown 2</a>
-                      </li>
-                      <li>
-                        <a href="#">Deep Dropdown 3</a>
-                      </li>
-                      <li>
-                        <a href="#">Deep Dropdown 4</a>
-                      </li>
-                      <li>
-                        <a href="#">Deep Dropdown 5</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Dropdown 2</a>
-                  </li>
-                  <li>
-                    <a href="#">Dropdown 3</a>
-                  </li>
-                  <li>
-                    <a href="#">Dropdown 4</a>
-                  </li>
-                </ul>
-              </li> */}
-              {/* <li>
-                <a href="#contact">Contact</a>
-              </li> */}
-              <li>
-                <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
-              </li>
-            </ul>
-            {/* <i className="mobile-nav-toggle d-xl-none bi bi-list" /> */}
-            {/* <i
-              className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
-            /> */}
-            {!isMenuOpen && (
-              <i
-                className="mobile-nav-toggle d-xl-none bi bi-list"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
-              />
-            )}
-            {/* <i 
-              className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`} 
-              onClick={() => setIsMenuOpen(!isMenuOpen)} 
-              style={{ cursor: "pointer" }}
-            /> */}
-          </nav>
-          {/* Click outside to close menu */}
-          {/* Click outside to close menu */}
-          {isMenuOpen && (
-            <div 
-              onClick={() => setIsMenuOpen(false)}
-              style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                zIndex: 9990,
-                pointerEvents: 'all'
-              }}
-            />
-          )}
-          <a className="cta-btn" href="index.html#about">
-            Get Started
-          </a>
-        </div>  
-      </header>
+      <Header />
       <main className="main">
         {/* Hero Section */}
         <section id="hero" className="hero section dark-background">
