@@ -119,6 +119,7 @@ function App() {
             /> */}
           </nav>
           {/* Click outside to close menu */}
+          {/* Click outside to close menu */}
           {isMenuOpen && (
             <div 
               onClick={() => setIsMenuOpen(false)}
@@ -128,7 +129,8 @@ function App() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                zIndex: 9998
+                zIndex: 9998,
+                pointerEvents: 'auto'
               }}
             />
           )}
