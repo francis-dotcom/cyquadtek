@@ -316,8 +316,8 @@
 import { useState, useEffect } from 'react';
 
 export default function TabbedInterface() {
-  const [activeTab, setActiveTab] = useState<number | null>(null);
-  // const [activeTab, setActiveTab] = useState<number>(1);
+  // const [activeTab, setActiveTab] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<number>(1);
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -360,8 +360,8 @@ export default function TabbedInterface() {
     }
   ];
 
-  // const currentTab = tabs.find(tab => tab.id === activeTab);
-  const currentTab = tabs.find(tab => tab.id === activeTab) || null;
+  const currentTab = tabs.find(tab => tab.id === activeTab);
+  // const currentTab = tabs.find(tab => tab.id === activeTab) || null;
 
 
   // detect screen size
