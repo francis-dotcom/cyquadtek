@@ -336,30 +336,31 @@ export default function TabbedInterface() {
     {
       id: 2,
       icon: "bi bi-laptop-fill",
-      title: "Web Development", 
-      description: "Modern applications and platforms",
-      details: "Custom web applications built with React, Node.js, and cutting-edge technologies.",
+      title: "Web Development",
+      description: "Modern, responsive web & mobile apps",
+      details: "We build high-performance applications using React, Next.js, Node.js, and TypeScript. From APIs to PWAs, our solutions are designed to be responsive, secure, and scalable — delivering seamless experiences across web and mobile platforms.",
       colorClass: "success",
       image: "/assets/img/working-2.jpg"
     },
     {
       id: 3,
       icon: "bi bi-shield-fill",
-      title: "Security",
-      description: "Protection and compliance",
-      details: "Comprehensive security audits, penetration testing, and compliance frameworks.",
+      title: "Security & Compliance",
+      description: "Cyber defense and regulatory compliance",
+      details: "We deliver penetration testing, threat modeling, and security audits using OWASP, Kali Linux, and Metasploit. Our services ensure compliance with ISO 27001, SOC 2, and GDPR while strengthening your overall cybersecurity posture.",
       colorClass: "warning",
       image: "/assets/img/working-3.jpg"
     },
     {
       id: 4,
       icon: "bi bi-graph-up-arrow",
-      title: "Consulting",
-      description: "Strategic technology guidance", 
-      details: "Expert advisory services for digital transformation and technology optimization.",
+      title: "Technology Consulting",
+      description: "Strategy for digital transformation", 
+      details: "We provide expert guidance on cloud adoption, DevOps, and AI/ML integration. Our consulting leverages frameworks like TOGAF and agile methodologies to optimize processes, reduce costs, and accelerate innovation.",
       colorClass: "info",
       image: "/assets/img/working-4.jpg"
     }
+
   ];
 
   const currentTab = tabs.find(tab => tab.id === activeTab);
