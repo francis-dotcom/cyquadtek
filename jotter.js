@@ -825,3 +825,366 @@
           </div>
         </section>
         {/* /Team Section */}
+
+
+        // header 
+        <header id="header" className="header d-flex align-items-center fixed-top">
+        <div className="container-fluid container-xl position-relative d-flex align-items-center">
+          <a href="index.html" className="logo d-flex align-items-center me-auto">
+            {/* Uncomment the line below if you also wish to use an image logo */}
+            <img src="/assets/img/logo3.png" alt=""/>
+            {/* <h1 className="sitename">CYQUADTECH</h1> */}
+          </a>
+          <nav id="navmenu" className={`navmenu ${isMenuOpen ? "mobile-nav-active" : ""}`}>
+
+            <ul>
+              <li>
+                <a href="#hero" className="active" onClick={() => setIsMenuOpen(false)}>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
+              </li>
+              <li>
+                <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
+              </li>
+              <li>
+                <a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a>
+              </li>
+              {/* <li className="dropdown">
+                <a href="#">
+                  <span>Dropdown</span>{" "}
+                  <i className="bi bi-chevron-down toggle-dropdown" />
+                </a>
+                <ul>
+                  <li>
+                    <a href="#">Dropdown 1</a>
+                  </li>
+                  <li className="dropdown">
+                    <a href="#">
+                      <span>Deep Dropdown</span>{" "}
+                      <i className="bi bi-chevron-down toggle-dropdown" />
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="#">Deep Dropdown 1</a>
+                      </li>
+                      <li>
+                        <a href="#">Deep Dropdown 2</a>
+                      </li>
+                      <li>
+                        <a href="#">Deep Dropdown 3</a>
+                      </li>
+                      <li>
+                        <a href="#">Deep Dropdown 4</a>
+                      </li>
+                      <li>
+                        <a href="#">Deep Dropdown 5</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown 3</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown 4</a>
+                  </li>
+                </ul>
+              </li> */}
+              {/* <li>
+                <a href="#contact">Contact</a>
+              </li> */}
+              <li>
+                <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
+              </li>
+            </ul>
+            {/* <i className="mobile-nav-toggle d-xl-none bi bi-list" /> */}
+            {/* <i
+              className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
+            /> */}
+            {!isMenuOpen && (
+              <i
+                className="mobile-nav-toggle d-xl-none bi bi-list"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                style={{ cursor: "pointer", fontSize: "1.8rem", marginLeft: "1rem", color: "#fff", zIndex: 2000 }}
+              />
+            )}
+            {/* <i 
+              className={`mobile-nav-toggle d-xl-none bi ${isMenuOpen ? "bi-x" : "bi-list"}`} 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              style={{ cursor: "pointer" }}
+            /> */}
+          </nav>
+          {/* Click outside to close menu */}
+          {/* Click outside to close menu */}
+          {isMenuOpen && (
+            <div 
+              onClick={() => setIsMenuOpen(false)}
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                zIndex: 9990,
+                pointerEvents: 'all'
+              }}
+            />
+          )}
+          <a className="cta-btn" href="index.html#about">
+            Get Started
+          </a>
+        </div>  
+      </header>
+
+      // footer 
+
+    <footer id="footer" className="footer dark-background">
+        <div className="container footer-top">
+          <div className="row gy-4">
+            <div className="col-lg-4 col-md-6 footer-about">
+              <a href="index.html" className="logo d-flex align-items-center">
+                <span className="sitename">Cyquadtech</span>
+              </a>
+              <div className="footer-contact pt-3">
+                <p>Remote</p>
+                <p>Atlanta, GA </p>
+                {/* <p className="mt-3">
+                  <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+                </p> */}
+                <p>
+                  <strong>Email:</strong> <span>requests@cyquadtech.com</span>
+                </p>
+              </div>
+              <div className="social-links d-flex mt-4">
+                <a href="">
+                  <i className="bi bi-twitter-x" />
+                </a>
+                <a href="">
+                  <i className="bi bi-facebook" />
+                </a>
+                <a href="">
+                  <i className="bi bi-instagram" />
+                </a>
+                <a href="">
+                  <i className="bi bi-linkedin" />
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-2 col-md-3 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i className="bi bi-chevron-right" /> <a href="#">Home</a>
+                </li>
+                <li>
+                  <i className="bi bi-chevron-right" /> <a href="#">About us</a>
+                </li>
+                <li>
+                  <i className="bi bi-chevron-right" /> <a href="#">Services</a>
+                </li>
+                <li>
+                  <i className="bi bi-chevron-right" />{" "}
+                  <a href="#">Terms of service</a>
+                </li>
+                <li>
+                  <i className="bi bi-chevron-right" />{" "}
+                  <a href="#">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-2 col-md-3 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li>
+                  <i className="bi bi-chevron-right" /> <a href="#">Web Services</a>
+                </li>
+                 <li>
+                  <i className="bi bi-chevron-right" /> <a href="#">Mobile Services</a>
+                </li>
+                <li>
+                  <i className="bi bi-chevron-right" />{" "}
+                  <a href="#">Cloud Infrastructure</a>
+                </li>
+                <li>
+                  <i className="bi bi-chevron-right" />{" "}
+                  <a href="#">Security & Compliance</a>
+                </li>
+                <li>
+                  <i className="bi bi-chevron-right" />{" "}
+                  <a href="#">Business Consulting</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-4 col-md-12 footer-newsletter">
+              <h4>Our Newsletter</h4>
+              <p>
+                Subscribe to our newsletter and receive the latest news about our
+                products and services!
+              </p>
+              <form
+                action="forms/newsletter.php"
+                method="post"
+                className="php-email-form"
+              >
+                <div className="newsletter-form">
+                  <input type="email" name="email" />
+                  <input type="submit" defaultValue="Subscribe" />
+                </div>
+                <div className="loading">Loading</div>
+                <div className="error-message" />
+                <div className="sent-message">
+                  Your subscription request has been sent. Thank you!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className="container copyright text-center mt-4">
+          <p>
+            © <span>Copyright 2025</span> <strong className="px-1 sitename">cyquadtech</strong>{" "}
+            <span>All Rights Reserved</span>
+          </p>
+          <div className="credits">
+            {/* All the links in the footer should remain intact. */}
+            {/* You can delete the links only if you've purchased the pro version. */}
+            {/* Licensing information: https://bootstrapmade.com/license/ */}
+            {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] */}
+            {/* Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>{" "} */}
+            {/* Distributed by <a href="“https://themewagon.com">ThemeWagon</a> */}
+          </div>
+          {/* <a href="“https://themewagon.com"></a> */}
+        </div>
+        {/* <a href="“https://themewagon.com"></a> */}
+      </footer>
+      <a href="“https://themewagon.com">Scroll Top</a>
+      <a
+        href="#"
+        id="scroll-top"
+        className="scroll-top d-flex align-items-center justify-content-center"
+      >
+        <i className="bi bi-arrow-up-short" />
+      </a>
+      {/* Preloader */}
+      {/* <div id="preloader" /> */}
+      {/* Vendor JS Files */}
+      {/* Main JS File */}
+
+
+      //contact section 
+              <section id="contact" className="contact section light-background">
+          {/* Section Title */}
+          <div className="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Feel Free to Contact Us</p>
+          </div>
+          {/* End Section Title */}
+          <div className="container" data-aos="fade-up" data-aos-delay={100}>
+            <div className="row gy-4">
+              <div className="col-lg-6 ">
+                <div className="row gy-4">
+                  <div className="col-lg-12">
+                    <div
+                      className="info-item d-flex flex-column justify-content-center align-items-center"
+                      data-aos="fade-up"
+                      data-aos-delay={200}
+                    >
+                      <i className="bi bi-geo-alt" />
+                      <h3>Address</h3>
+                      <p>Remote, US</p>
+                    </div>
+                  </div>
+                  {/* End Info Item */}
+                  <div className="col-md-6">
+                    <div
+                      className="info-item d-flex flex-column justify-content-center align-items-center"
+                      data-aos="fade-up"
+                      data-aos-delay={300}
+                    >
+                      <i className="bi bi-telephone" />
+                      <h3>Call Us</h3>
+                      <p>+1 404 600 9729</p>
+                    </div>
+                  </div>
+                  {/* End Info Item */}
+                  <div className="col-md-6">
+                    <div
+                      className="info-item d-flex flex-column justify-content-center align-items-center"
+                      data-aos="fade-up"
+                      data-aos-delay={400}
+                    >
+                      <i className="bi bi-envelope" />
+                      <h3>Email Us</h3>
+                      <p>requests@cyquadtech.com</p>
+                    </div>
+                  </div>
+                  {/* End Info Item */}
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <form
+                  action="forms/contact.php"
+                  method="post"
+                  className="php-email-form"
+                  data-aos="fade-up"
+                  data-aos-delay={500}
+                >
+                  <div className="row gy-4">
+                    <div className="col-md-6">
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        placeholder="Your Name"
+                        required />
+                    
+                    </div>
+                    <div className="col-md-6 ">
+                      <input
+                        type="email"
+                        className="form-control"
+                        name="email"
+                        placeholder="Your Email"
+                        required />
+                      
+                    </div>
+                    <div className="col-md-12">
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="subject"
+                        placeholder="Subject"
+                        required />
+                
+                    </div>
+                    <div className="col-md-12">
+                      <textarea
+                        className="form-control"
+                        name="message"
+                        rows={4}
+                        placeholder="Message"
+                        required />
+                
+        
+                    </div>
+                    <div className="col-md-12 text-center">
+                      <div className="loading">Loading</div>
+                      <div className="error-message" />
+                      <div className="sent-message">
+                        Your message has been sent. Thank you!
+                      </div>
+                      <button type="submit">Send Message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              {/* End Contact Form */}
+            </div>
+          </div>
+        </section>
