@@ -328,8 +328,8 @@ export default function TabbedInterface() {
       id: 1,
       icon: "bi bi-cloud-fill",
       title: "Cloud Solutions",
-      description: "Scalable infrastructure and deployment",
-      details: "Full-stack cloud engineering with focus on reliability, security, and performance optimization.",
+      description: "Scalable, secure, cloud-native infrastructure",
+      details: "We specialize in AWS, Azure, and GCP cloud engineering — from migration and DevOps automation to Kubernetes orchestration and serverless apps. Our focus is on building reliable, cost-efficient, and compliant systems optimized for security and performance.",
       colorClass: "primary",
       image: "/assets/img/working-1.jpg"
     },
@@ -363,16 +363,6 @@ export default function TabbedInterface() {
   ];
 
   const currentTab = tabs.find(tab => tab.id === activeTab);
-  // const currentTab = tabs.find(tab => tab.id === activeTab) || null;
-
-
-  // // detect screen size
-  // useEffect(() => {
-  //   const checkScreen = () => setIsMobile(window.innerWidth < 992);
-  //   checkScreen();
-  //   window.addEventListener("resize", checkScreen);
-  //   return () => window.removeEventListener("resize", checkScreen);
-  // }, []);
 
   useEffect(() => {
     const mobile = window.innerWidth < 992;
