@@ -437,6 +437,7 @@ export default function TabbedInterface() {
                   </div>
                   <div className="col-md-4 text-center">
                     <img 
+                      key={currentTab.id}
                       src={currentTab.image} 
                       alt={currentTab.title}
                       className="img-fluid rounded-3 shadow"
