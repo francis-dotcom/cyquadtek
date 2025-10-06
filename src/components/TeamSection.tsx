@@ -161,15 +161,16 @@ const team: TeamMember[] = [
   {
   id: 2,
   name: "Jane D.",
-  role: "UI/UX Designer & Mobile Developer",
-  bio: "Jane blends creative design with technical expertise, crafting intuitive, human-centered interfaces and developing robust mobile applications for iOS and Android. With a strong focus on accessibility and seamless user journeys, she bridges the gap between design and development to deliver exceptional mobile experiences."
+  role: "Mobile Developer & UI/UX Designer",
+  bio: "Jane blends creativity with engineering to deliver seamless mobile experiences across iOS and Android. She is skilled in Swift, SwiftUI, and Xcode for iOS development, as well as Kotlin, Java, and Android Studio for Android. On the design side, she uses Figma, Sketch, and Adobe XD to craft human-centered, accessible interfaces. Jane also integrates tools like React Native and Flutter for cross-platform development, and applies user testing frameworks such as Maze and Hotjar to validate and refine her designs. Her approach ensures that every app is not only functional and performant, but also delightful to use."
   },
   {
-    id: 3,
-    name: "Michael T.",
-    role: "Project Manager",
-    bio: "Michael brings over 10 years of experience in agile project management and risk management for enterprise IT solutions.",
+  id: 3,
+  name: "Michael T.",
+  role: "Cybersecurity & Compliance Lead",
+  bio: "Michael combines over a decade of agile project management with deep technical expertise in cybersecurity and compliance. He has led initiatives in vulnerability management, penetration testing, and cloud security, leveraging tools such as Wireshark, Nessus, Burp Suite, and Metasploit. Michael also implements compliance frameworks including ISO 27001, NIST, and SOC 2, and is experienced with SIEM platforms like Splunk and Azure Sentinel to ensure continuous monitoring, risk mitigation, and regulatory alignment across enterprise systems."
   },
+
 ];
 
 export default function TeamSection() {
